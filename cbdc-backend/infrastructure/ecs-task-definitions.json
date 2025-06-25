@@ -1,0 +1,19 @@
+{
+    "family": "fabric-peer",
+    "containerDefinitions": [
+      {
+        "name": "peer0-org1",
+        "image": "hyperledger/fabric-peer:2.5",
+        "cpu": 256,
+        "memory": 512,
+        "essential": true,
+        "portMappings": [
+          { "containerPort": 7051, "hostPort": 7051 }
+        ],
+        "environment": [
+          { "name": "CORE_PEER_ID", "value": "peer0.org1.fintrust.com" },
+          { "name": "CORE_PEER_ADDRESS", "value": "peer0.org1.fintrust.com:7051" }
+        ]
+      }
+    ]
+  }
